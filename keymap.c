@@ -60,10 +60,11 @@ const uint16_t PROGMEM CTL_ESC= LCTL_T(KC_ESC);          // Ctl or Esc
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Dvorak (alpha & ponctuation).
-    // @ and / are also available on this layer as they are used often.
+    // @ and / are also available on this layer as they are used frequently.
     // Modifiers (CMD, CTL, ALT) are on strongest fingers, but on lower row to avoid misfires when typing fast (rolling), 
     // q, j ,k, m, w, v are almost never seen consecutively in English, so no modifier misfires.
     // Top row is used for shortcuts.
+    // Arrows on thumb keys are handy for quick terminal work or when using only one hand. As well as shortcuts using arrows.
     //
     // -------------------------------------------------------------                      ------------------------------------------------------------
     // |   Esc  | WinLeft |         | ScrShot |         |  Undo    |                      |  Redo  |   Cut   |   Copy  |  Paste  | WinRight| Toggle1 |
@@ -95,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // |--------|---------|---------|---------|--------------------|                      |--------|---------|---------|---------|---------|---------| 
     // |   #    |    ~    |   Left  |   Down  |  Right  |    !     |                      |   =    |    4    |    5    |    6    |    +    |    -    | 
     // |--------|---------|---------|---------|--------------------|----------------------|--------|---------|---------|---------|---------|---------| 
-    // |   @    |    :    |    $    | Page Dn |    &    |    |     |           |          |   B    |    7     |   8    |    9    |    *    |    /    | 
+    // |   @    |    :    |    $    | Page Dn |    &    |    |     |           |          |   .    |    7     |   8    |    9    |    *    |    /    | 
     // ---------|---------|---------|---------|--------------------|-----------|----------|--------|---------|---------|---------|---------|---------| 
     //                                        |    Up   |  Enter   |  Home     |   End    |   ,    |   Down  |
     //                                        ----------------------------------------------------------------   
