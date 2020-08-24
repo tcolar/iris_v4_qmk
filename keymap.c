@@ -41,9 +41,9 @@ const uint16_t PROGMEM SFT_U   = LSFT_T(KC_U);    // Shift or U
 const uint16_t PROGMEM SFT_H   = RSFT_T(KC_H);    // Shift or H
 
 // Shortcuts
-const uint16_t PROGMEM WIN_LEFT  = LGUI(LALT(KC_LEFT));
-const uint16_t PROGMEM WIN_RGHT  = LGUI(LALT(KC_RGHT));
-const uint16_t PROGMEM SCR_SHOT  = SGUI(KC_4);          // Screnshot
+const uint16_t PROGMEM WIN_LEFT  = LGUI(LALT(KC_LEFT));  // Spectacle, window to left
+const uint16_t PROGMEM WIN_RGHT  = LGUI(LALT(KC_RGHT));  // Spectacle, window to right
+const uint16_t PROGMEM SCR_SHOT  = SGUI(KC_4);           // Screnshot
 const uint16_t PROGMEM UNDO      = LGUI(KC_Z);
 const uint16_t PROGMEM REDO      = LCTL(LSFT(KC_Z));
 const uint16_t PROGMEM CUT       = LGUI(KC_X);
@@ -52,14 +52,14 @@ const uint16_t PROGMEM PASTE     = LGUI(KC_V);
 const uint16_t PROGMEM LOGOUT    = LCTL(LGUI(KC_Q)); 
 const uint16_t PROGMEM HOME      = LCTL(KC_A);
 const uint16_t PROGMEM _END       = LCTL(KC_E);
-const uint16_t PROGMEM SFT_BR = LSFT_T(KC_LBRC); // Shift or [
-const uint16_t PROGMEM SFT_RBR= LSFT_T(KC_RBRC); // Shift or ]
-const uint16_t PROGMEM CTL_ESC= LCTL_T(KC_ESC);  // Ctl or Esc
+const uint16_t PROGMEM SFT_BR = LSFT_T(KC_LBRC);         // Shift or [
+const uint16_t PROGMEM SFT_RBR= LSFT_T(KC_RBRC);         // Shift or ]
+const uint16_t PROGMEM CTL_ESC= LCTL_T(KC_ESC);          // Ctl or Esc
 
-// Layout for My Ireis V4 keyboard. Thibaut Ciolar.
+// Layout for My Iris V4 keyboard. Thibaut Colar.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    // Dvorak (alpha & punctuation).
+    // Dvorak (alpha & ponctuation).
     // @ and / are also available on this layer as they are used often.
     // Modifiers (CMD, CTL, ALT) are on strongest fingers, but on lower row to avoid misfires when typing fast (rolling), 
     // q, j ,k, m, w, v are almost never seen consecutively in English, so no modifier misfires.
@@ -83,9 +83,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_AT   , KC_SCLN , CTL_Q   , ALT_J   , CMD_K   , KC_X     , TOG_3     , L2      , KC_B    , CMD_M   , ALT_W   , CTL_V   , KC_Z    , KC_PSLS, 
                                                  KC_UP  , KC_ENT   , L1_LEFT   , L1_RGHT , KC_SPC  , KC_DOWN),
 
-    // Numbers and Math symbols on right (Numbers are top to bottom, standard numpads make little sense to me).
-    // Nav keys on left, "WASD like".
-    // Rest of programming symbols on left as well. Closing parentheses and brackets are on top row because IDE usually closes them for me.
+    // Numbers and math symbols on right (Numbers are top to bottom, standard numpads make little sense to me).
+    // Nav keys on left, "WASD style".
+    // Rest of programming symbols on left as well. 
+    // Closing parentheses and brackets are on top row because IDE usually closes them for me.
     //
     // -------------------------------------------------------------                      ------------------------------------------------------------
     // | Vi Bye |         |    }    | Page Up |    )    |    ]     |                      | Logout |         |         |         |         | Toggle1 |
@@ -106,9 +107,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                 KC_TRNS , KC_TRNS  , HOME      , _END    , KC_COMM  , KC_TRNS),
 
     // Function keys, brightness, volume, and other rarely used keys.
-    // Numbers and Math symbols on right (Numbers are top to bottom, standard numpads make little sense to me).
-    // Nav keys on left, "WASD like".
-    // Rest of programming symbols on left as well. Closing parentheses and brackets are on top row because IDE usually closes them for me.
     //
     // -------------------------------------------------------------                      ------------------------------------------------------------
     // |  F1    |    F2   |    F3   |    F4   |    F5   |    F6    |                      |   F7   |    F8   |    F9   |   F10   |   F11   |   F12   |
@@ -117,7 +115,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // |--------|---------|---------|---------|--------------------|                      |--------|---------|---------|---------|---------|---------| 
     // |        |         |         | RgbMod- | Bright- |   Vol-   |                      |        |         |         |         |  Eject  |  Pause  | 
     // |--------|---------|---------|---------|--------------------|----------------------|--------|---------|---------|---------|---------|---------| 
-    // |        |         |         | RbgTog  |         |   Mute   |           |          |        |         |         |         |  PrtScr |  Scroll | 
+    // |        |         |         | RbgTog  |         |   Mute   |   RESET   |    L2    |        |         |         |         |  PrtScr |  Scroll | 
     // ---------|---------|---------|---------|--------------------|-----------|----------|--------|---------|---------|---------|---------|---------| 
     //                                        |         |          |  CapsLck  |  CapsLck |        |         |
     //                                        ----------------------------------------------------------------      
@@ -131,20 +129,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Normal-ish QWERTY keyboard, maybe to play a game without key remapping or something ...
     //
     // -------------------------------------------------------------                      ------------------------------------------------------------
-    // |  ` ~   |    1    |    2    |    3    |    4    |    5     |                      |   6    |    7    |    8    |   9     |    0    |Backspace|
+    // |  Esc   |     1   |    2    |    3    |    4    |    5     |                      |   6    |    7    |    8    |   9     |    0    |Backspace|
     // |--------|---------|---------|---------|--------------------|                      |--------|---------|---------|---------|---------|---------| 
-    // |   Tab  |     Q   |    W    |    E    |    R     |   T     |                      |   Y    |    U    |    I    |   O     |    P    |   \ |   | 
+    // |  Tab   |     Q   |    W    |    E    |    R     |   T     |                      |   Y    |    U    |    I    |   O     |    P    |   \ |   | 
     // |--------|---------|---------|---------|--------------------|                      |--------|---------|---------|---------|---------|---------| 
-    // |Ctrl Esc|     A   |    S    |    D    |    F     |   G     |                      |   H    |    J    |    K    |   L     |  ; :    |   ' "   | 
+    // |  Ctrl  |     A   |    S    |    D    |    F     |   G     |                      |   H    |    J    |    K    |   L     |  ; :    |   ' "   | 
     // |--------|---------|---------|---------|--------------------|----------------------|--------|---------|---------|---------|---------|---------| 
     // |Shift [ |     Z   |    X    |    C    |    V     |   B     |  Toggle3  |   ` ~    |   N    |    M    |   , <   |   . >   |  / ?    | Shift ] | 
     // ---------|---------|---------|---------|--------------------|-----------|----------|--------|---------|---------|---------|---------|---------| 
-    //                                        |   Cmd    |  Enter  |   - _     |   + =    |  Space | Alt     |
+    //                                        |   Cmd    |  Enter  |   - _     |   + =    |  Space |   Alt   |
     //                                        ----------------------------------------------------------------      
     [_QWERTY] = LAYOUT(
-        KC_GRV  , KC_1    , KC_2    , KC_3    , KC_4    , KC_5                 ,           KC_6     , KC_7     , KC_8    , KC_9   , KC_0    , KC_BSPC, 
+        KC_ESC  , KC_1    , KC_2    , KC_3    , KC_4    , KC_5                 ,           KC_6     , KC_7     , KC_8    , KC_9   , KC_0    , KC_BSPC, 
         KC_TAB  , KC_Q    , KC_W    , KC_E    , KC_R    , KC_T                 ,           KC_Y     , KC_U     , KC_I    , KC_O   , KC_P    , KC_BSLS, 
-        CTL_ESC , KC_A    , KC_S    , KC_D    , KC_F    , KC_G                 ,           KC_H     , KC_J     , KC_K    , KC_L   , KC_COLN , KC_QUOT, 
+        KC_LCTL , KC_A    , KC_S    , KC_D    , KC_F    , KC_G                 ,           KC_H     , KC_J     , KC_K    , KC_L   , KC_COLN , KC_QUOT, 
         SFT_BR  , KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , TOG_3      , KC_GRV  , KC_N     , KC_M     , KC_COMM , KC_DOT , KC_SLSH , SFT_RBR, 
                                                 KC_LGUI , KC_ENT  , KC_MINS    , KC_PLUS ,KC_SPC   , KC_LALT)
 };
