@@ -17,7 +17,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 };
 
 // Layers
-enum planck_layers {
+enum kb_layers {
   _DVORAK,   // 0
   _SYMBOLS,  // 1
   _FUNCTION, // 2
@@ -34,7 +34,7 @@ const uint16_t PROGMEM L1_RGHT = LT(1, KC_RGHT); // Layer1 or Right arrow
 const uint16_t PROGMEM CTL_Q   = LCTL_T(KC_Q);    // Control when held, Q otherwise
 const uint16_t PROGMEM ALT_J   = LALT_T(KC_J);    // Alt or J
 const uint16_t PROGMEM CMD_K   = LGUI_T(KC_K);    // Command or K
-const uint16_t PROGMEM CMD_M   = RGUI_T(KC_M);s    // Command or M
+const uint16_t PROGMEM CMD_M   = RGUI_T(KC_M);    // Command or M
 const uint16_t PROGMEM ALT_W   = RALT_T(KC_W);    // Alt or W
 const uint16_t PROGMEM CTL_V   = RCTL_T(KC_V);    // Command or V
 const uint16_t PROGMEM SFT_U   = LSFT_T(KC_U);    // Shift or U
